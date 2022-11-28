@@ -5,7 +5,8 @@ import './App.css';
 
 const App = () => {
   const routes = useRoutes ([
-    {path:'/', element : <Pages.Home /> }
+    {path:'/', element : <Pages.Home /> },
+    {path:'/new', element : <Pages.New />}
   ])
   return routes;
 }
