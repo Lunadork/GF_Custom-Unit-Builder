@@ -11,11 +11,22 @@ export const UnitForm = () => {
   const [weapons,setWeapons] = useState([]);
   const [rules,setRules] = useState([])
 
+  const calcPoints = (e) => {
+    
+  }
 
 
   return(
     <>
     <h1>Unit Form</h1>
+    <form  className='groupForm'  onSubmit={calcPoints}>
+
+    <input className='groupInput' type = 'text' placeholder='New Unit Name' onChange={(e) => setName(e.target.value)}/>
+    <input className='groupInput' type = 'text' placeholder='Description/Notes' onChange={(e) => setDescription(e.target.value)}/>
+    <input className='groupInput' type = 'number' placeholder='Quality' onChange={(e) => setQuality(e.target.value)}/>
+    <input className='groupInput' type = 'number' placeholder='Defense' onChange={(e) => setDefense(e.target.value)}/>
+    <input className='groupSubmitbtn' type='submit' value='Calculate points' />
+    </form>
     </>
   ) 
 }
