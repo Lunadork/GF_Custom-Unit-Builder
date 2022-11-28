@@ -3,13 +3,13 @@ import './style.css'
 
 export const UnitForm = () => {
 
-  const [name,setName] = useState('');
-  const [description,setDescription] = useState('');
-  const [points,setPoints] = useState('');
-  const [quality,setQuality] = useState('');
-  const [defense,setDefense] = useState('');
-  const [weapons,setWeapons] = useState('');
-  const [rules,setRules] = useState('')
+  const [name,setName] = useState('New Unit Name');
+  const [description,setDescription] = useState('Description/Notes');
+  const [points,setPoints] = useState(0);
+  const [quality,setQuality] = useState(6);
+  const [defense,setDefense] = useState(6);
+  const [weapons,setWeapons] = useState([]);
+  const [rules,setRules] = useState([])
 
 
 
