@@ -45,6 +45,7 @@ const getApCost = (weapon) => {
 }
 
 const getSpecialCost = (weapon, subCost) => {
+    let cost = 0
 
     for (rule in weapon.rules){
         switch (rule){
