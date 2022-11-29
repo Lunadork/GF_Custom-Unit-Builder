@@ -8,6 +8,8 @@ const weaponCostCalculator = (weapon) => {
 
     const specialCost = getSpecialCost(weapon, subCost) 
 
+    cost = subCost + specialCost
+
     return cost;
 }
 
@@ -17,7 +19,7 @@ const getBaseCost = (weapon) => {
 
 }
 
-const getSpecialCost = (weapon) => {
+const getApCost = (weapon) => {
     let cost = 0
 
     switch (weapon.ap){
@@ -39,11 +41,17 @@ const getSpecialCost = (weapon) => {
             console.warn(`Invalid AP value, ${weapon.ap}`)
     }
 
+    return cost;
+}
+
+const getSpecialCost = (weapon, subCost) => {
+
     for (rule in weapon.rules){
         switch (rule){
-            
+            //DO THING
         }
     }
+
 }
 
 exports = module.exports = { weaponCostCalculator }
