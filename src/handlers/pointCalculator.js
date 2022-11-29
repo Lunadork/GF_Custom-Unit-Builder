@@ -1,5 +1,5 @@
 const { statsCostCalculator } = require('./defenceQualityHandler/statsCostCalculator')
-const { weaponCostCalculator } = require('./')
+const { weaponCostCalculator } = require('./weaponHandler/weaponCostCalculator')
 
 const pointCalculator = (unit) => {
 
