@@ -40,6 +40,12 @@ export const UnitForm = () => {
 
   }
 
+  const calcWeaponPoints = (e) => {
+    e.preventDefault();
+
+    //TODO
+  }
+
 
   //Do proper styling later
   return(
@@ -47,37 +53,53 @@ export const UnitForm = () => {
     <h1>Unit Form</h1>
     <form  className='groupForm'  onSubmit={calcPoints}>
 
-    <label htmlFor="name" className="groupLabel">Name:  </label>
-    <input id="name" className='groupInput' type = 'text' placeholder='New Unit Name' onChange={(e) => setName(e.target.value)}/>
+      <label htmlFor="name" className="groupLabel">Name:  </label>
+      <input id="name" className='groupInput' type = 'text' placeholder='New Unit Name' onChange={(e) => setName(e.target.value)}/>
 
-    <br></br>
-    <br></br>
+      <br></br>
 
-    <label htmlFor="desc" className="groupLabel">Description:  </label>
-    <input id="desc" className='groupInput' type = 'text' placeholder='Description/Notes' onChange={(e) => setDescription(e.target.value)}/>
+      <label htmlFor="desc" className="groupLabel">Description:  </label>
+      <input id="desc" className='groupInput' type = 'text' placeholder='Description/Notes' onChange={(e) => setDescription(e.target.value)}/>
 
-    <br></br>
-    <br></br>
+      <br></br>
 
-    <label htmlFor="quality" className="groupLabel">Quality:  </label>
-    <input id="quality" className='groupInput' type = 'number' placeholder='Quality' onChange={(e) => setQuality(e.target.value)}/>
+      <label htmlFor="quality" className="groupLabel">Quality:  </label>
+      <input id="quality" className='groupInput' type = 'number' placeholder='Quality' onChange={(e) => setQuality(e.target.value)}/>
 
-    <br></br>
-    <br></br>
+      <br></br>
 
-    <label htmlFor="defense" className="groupLabel">Defense:  </label>
-    <input id="defense" className='groupInput' type = 'number' placeholder='Defense' onChange={(e) => setDefense(e.target.value)}/>
+      <label htmlFor="defense" className="groupLabel">Defense:  </label>
+      <input id="defense" className='groupInput' type = 'number' placeholder='Defense' onChange={(e) => setDefense(e.target.value)}/>
 
-    <br></br>
-    <br></br>
+      <br></br>
 
-    <label htmlFor="models" className="groupLabel">Models Per Unit:  </label>
-    <input id="models" className='groupInput' type = 'number' placeholder='Models per unit' onChange={(e) => setModels(e.target.value)}/>
+      <label htmlFor="models" className="groupLabel">Models Per Unit:  </label>
+      <input id="models" className='groupInput' type = 'number' placeholder='Models per unit' onChange={(e) => setModels(e.target.value)}/>
 
-    <br></br>
-    <br></br>
+      <br></br>
 
-    <input className='groupSubmitbtn' type='submit' value='Calculate points' />
+      <input className='groupSubmitbtn' type='submit' value='Calculate points' />
+    </form>
+
+    <br></br> 
+
+    <h2>Weapon 1</h2>
+    <form className='groupForm' onSubmit={calcWeaponPoints}>
+
+        <label htmlFor="weaponName" className="groupLabel">Name</label>
+        <input id ="weaponName" className="groupInput" type = "text" placeholder = "Name"></input>
+
+        <label htmlFor="range" className="groupLabel">Range</label>
+        <input id ="range" className="groupInput" type = "number" placeholder = "Range"></input>
+
+        <label htmlFor="attacks" className="groupLabel">Attacks</label>
+        <input id ="attacks" className="groupInput" type = "number" placeholder = "Attacks"></input>
+
+        <label htmlFor="ap" className="groupLabel">AP</label>
+        <input id ="ap" className="groupInput" type = "number" placeholder = "AP"></input>
+
+        <input className='groupSubmitbtn' type='submit' value='Calculate points' />
+
     </form>
 
     <br></br>
@@ -85,6 +107,11 @@ export const UnitForm = () => {
 
     <label htmlFor="points" className="pointsLabel">Points cost: </label>
     <p id="points" className="pointsP">{points}</p>
+    <br></br>
+    <br></br>
+
+
+    
     </>
   ) 
 }
