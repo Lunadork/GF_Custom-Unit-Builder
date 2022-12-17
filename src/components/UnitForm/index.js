@@ -1,17 +1,24 @@
 import { React, useState } from 'react'
 import './style.css'
+import { WeaponForm } from '../index'
 const { pointCalculator } = require('../../handlers/pointCalculator');
+const {weaponCostCalculator} = require('../../handlers/weaponHandler/weaponCostCalculator')
 
 
 export const UnitForm = () => {
 
+  //unit
   const [name,setName] = useState('New Unit Name');
   const [description,setDescription] = useState('Description/Notes');
   const [points,setPoints] = useState(0);
   const [quality,setQuality] = useState(6);
   const [defense,setDefense] = useState(6);
   const [models,setModels] = useState(1);
+
+  //weapons
   const [weapons,setWeapons] = useState([]);
+
+  //rules
   const [rules,setRules] = useState([])
   
 
@@ -36,8 +43,6 @@ export const UnitForm = () => {
     setPoints(result.unitTotal)
 
     //make better later
-    alert("Points cost: " + result.unitTotal);
-
   }
 
   const calcWeaponPoints = (e) => {
@@ -81,29 +86,10 @@ export const UnitForm = () => {
       <input className='groupSubmitbtn' type='submit' value='Calculate points' />
     </form>
 
-    <br></br> 
-
-    <h2>Weapon 1</h2>
-    <form className='groupForm' onSubmit={calcWeaponPoints}>
-
-        <label htmlFor="weaponName" className="groupLabel">Name</label>
-        <input id ="weaponName" className="groupInput" type = "text" placeholder = "Name"></input>
-
-        <label htmlFor="range" className="groupLabel">Range</label>
-        <input id ="range" className="groupInput" type = "number" placeholder = "Range"></input>
-
-        <label htmlFor="attacks" className="groupLabel">Attacks</label>
-        <input id ="attacks" className="groupInput" type = "number" placeholder = "Attacks"></input>
-
-        <label htmlFor="ap" className="groupLabel">AP</label>
-        <input id ="ap" className="groupInput" type = "number" placeholder = "AP"></input>
-
-        <input className='groupSubmitbtn' type='submit' value='Calculate points' />
-
-    </form>
-
     <br></br>
     <br></br>
+
+    <WeaponForm/>
 
     <label htmlFor="points" className="pointsLabel">Points cost: </label>
     <p id="points" className="pointsP">{points}</p>
