@@ -19,7 +19,7 @@ const statsCostCalculator = (stat) => {
             cost = cost + 12
             break;
         default:
-            console.warn(`Invalid quality/defense, ${stat}`);
+            console.log(`Invalid quality/defense, ${stat}`);
     }
 
     return cost;
