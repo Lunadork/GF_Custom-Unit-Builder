@@ -3,16 +3,21 @@ const { weaponCostCalculator } = require('./weaponHandler/weaponCostCalculator')
 
 const pointCalculator = (unit) => {
 
+    console.log(unit)
+
     const stats = getStatsCost(unit);
-    const weapons = getWeaponsCost(unit);
-    const rules = getRulesCost(unit);
+    const weapons = 0; //getWeaponsCost(unit);
+    const rules = 0; //getRulesCost(unit);
 
     const modelTotal = stats + weapons + rules
+
+    console.log(stats)
+    console.log(modelTotal)
 
     const unitTotal = modelTotal * unit.models
 
 
-    return [unitTotal, modelTotal, stats, weapons, rules]
+    return {unitTotal, modelTotal, stats, weapons, rules}
 
 }
 

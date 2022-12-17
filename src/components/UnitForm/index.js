@@ -33,7 +33,7 @@ export const UnitForm = () => {
 
     const result = pointCalculator(unit);
 
-    setPoints(result)
+    setPoints(result.unitTotal)
 
     //make better later
     alert("Points cost: " + result.unitTotal);
@@ -47,31 +47,31 @@ export const UnitForm = () => {
     <h1>Unit Form</h1>
     <form  className='groupForm'  onSubmit={calcPoints}>
 
-    <label for="name" className="groupLabel">Name</label>
+    <label htmlFor="name" className="groupLabel">Name:  </label>
     <input id="name" className='groupInput' type = 'text' placeholder='New Unit Name' onChange={(e) => setName(e.target.value)}/>
 
     <br></br>
     <br></br>
 
-    <label for="desc" className="groupLabel">Description</label>
+    <label htmlFor="desc" className="groupLabel">Description:  </label>
     <input id="desc" className='groupInput' type = 'text' placeholder='Description/Notes' onChange={(e) => setDescription(e.target.value)}/>
 
     <br></br>
     <br></br>
 
-    <label for="quality" className="groupLabel">Quality</label>
+    <label htmlFor="quality" className="groupLabel">Quality:  </label>
     <input id="quality" className='groupInput' type = 'number' placeholder='Quality' onChange={(e) => setQuality(e.target.value)}/>
 
     <br></br>
     <br></br>
 
-    <label for="defense" className="groupLabel">Defense</label>
+    <label htmlFor="defense" className="groupLabel">Defense:  </label>
     <input id="defense" className='groupInput' type = 'number' placeholder='Defense' onChange={(e) => setDefense(e.target.value)}/>
 
     <br></br>
     <br></br>
 
-    <label for="models" className="groupLabel">Models Per Unit</label>
+    <label htmlFor="models" className="groupLabel">Models Per Unit:  </label>
     <input id="models" className='groupInput' type = 'number' placeholder='Models per unit' onChange={(e) => setModels(e.target.value)}/>
 
     <br></br>
@@ -79,6 +79,12 @@ export const UnitForm = () => {
 
     <input className='groupSubmitbtn' type='submit' value='Calculate points' />
     </form>
+
+    <br></br>
+    <br></br>
+
+    <label htmlFor="points" className="pointsLabel">Points cost: </label>
+    <p id="points" className="pointsP">{points}</p>
     </>
   ) 
 }
