@@ -26,9 +26,9 @@ const getWeaponsCost = (unit) => {
 
     let cost = 0;
 
-    for (weapon in unit.weapons) {
-        cost = cost + weaponCostCalculator(weapon)
-    }
+    // for (weapon in unit.weapons) {
+    //     cost = cost + weaponCostCalculator(weapon)
+    // }
 
     return cost;
 
