@@ -1,6 +1,8 @@
 const weaponCostCalculator = (weapon) => {
     let cost = 0;
 
+    
+
     const baseCost = getBaseCost(weapon)
     const apCost = getApCost(weapon)
 
@@ -22,7 +24,7 @@ const getBaseCost = (weapon) => {
 const getApCost = (weapon) => {
     let cost = 0
 
-    switch (weapon.ap){
+    switch (parseInt(weapon.ap)){
         case 0:
             break;
         case 1:
