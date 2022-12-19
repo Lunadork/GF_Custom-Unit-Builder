@@ -14,6 +14,7 @@ export const UnitForm = () => {
   const [quality,setQuality] = useState(6);
   const [defense,setDefense] = useState(6);
   const [models,setModels] = useState(1);
+  const [tough,setTough] = useState(0);
 
   //weapons
   const [weapons,setWeapons] = useState([]);
