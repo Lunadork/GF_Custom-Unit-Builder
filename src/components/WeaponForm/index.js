@@ -23,6 +23,7 @@ export const WeaponForm = () => {
   
     return (
     <>
+        <h1>Weapons</h1>
     
         <form className='groupForm' onSubmit={calcWeaponPoints}>
 

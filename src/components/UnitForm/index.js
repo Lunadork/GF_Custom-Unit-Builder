@@ -1,6 +1,6 @@
 import { React, useState } from 'react'
 import './style.css'
-import { WeaponForm } from '../index'
+import { RuleForm, WeaponForm } from '../index'
 const { pointCalculator } = require('../../handlers/pointCalculator');
 const {weaponCostCalculator} = require('../../handlers/weaponHandler/weaponCostCalculator')
 
@@ -86,6 +86,11 @@ export const UnitForm = () => {
 
       <input className='groupSubmitbtn' type='submit' value='Calculate points' />
     </form>
+
+    <br></br>
+    <br></br>
+
+    <RuleForm/>
 
     <br></br>
     <br></br>
